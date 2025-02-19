@@ -1,0 +1,82 @@
+/* התאמה כללית למסכים קטנים */
+body {
+    font-size: 1rem; /* שימוש בגודל גופן יחסי */
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* רקע קבוע */
+	background-image:url("images/backgroundi.jpg");
+}
+
+/* מרכוז הקונטיינרים והתאמה לגודל דינמי */
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+/* עיצוב התפריט כדי שיתאים לניידים */
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* יאפשר ירידה לשורה חדשה במסכים קטנים */
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+/* התאמה למסכים קטנים - תפריט נפתח */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* מסכים קטנים יציגו את התפריט בטור */
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* התאמת המוצרים למסכים קטנים */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.product {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+/* תמונות רספונסיביות */
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* התאמה של הכותרות */
+h2 {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem; /* כותרות קטנות יותר במסכים קטנים */
+    }
+}
+
+/* התאמת פונט וריווח של תיאורים במסכים קטנים */
+@media (max-width: 500px) {
+    .container p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
