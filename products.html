@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כל המוצרים</title>
+    <link rel="stylesheet" href="style.css"> <!-- חיבור לקובץ העיצוב הראשי -->
+</head>
+<body class="products-page">
+
+    <!-- תפריט ראשי -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="products.html" class="active">כל המוצרים</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="contact.html">צור קשר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>כל המוצרים</h1>
+
+        <!-- כפתורי סינון -->
+        <div class="filter-buttons">
+            <button onclick="filterProducts('all')">הכל</button>
+            <button onclick="filterProducts('cleaning')">ניקיון</button>
+            <button onclick="filterProducts('magav')">מגבים</button>
+        </div>
+
+        <!-- אזור המוצרים -->
+        <div class="products">
+		
+			<div class="product" data-category="cleaning">
+			<img src="images/sponge.webp" alt="ספוג">
+			<div class="product-info">
+			<h2>סקוץ כלים</h2>
+			<p>.מארז של שלושה סקוצים איכותיים לניקוי כלים </p>
+				<p class="price">₪15</p>
+			</div>
+		
+            <div class="product" >
+                <img src=">
+                <p>ספוג איכותי</p>
+            </div>
+
+            <div class="product" data-category="cleaning">
+                <img src="images/gilda.webp" alt="מטלית">
+                <p>מטלית ניקוי</p>
+            </div>
+
+            <div class="product" data-category="cleaning">
+                <img src="images/3.webp" alt="שלישיית מטליות">
+                <p>מטליות ניקוי רב שימושיות</p>
+            </div>
+
+            <div class="product" data-category="cleaning">
+                <img src="images/shava.webp" alt="סחבת רצפה">
+                <p>סחבת מיקרופייבר</p>
+            </div>
+			
+			<div class="product" data-category="magav">
+                <img src="images/mop.webp" alt="מגב אייפל">
+                <p>מגב אייפל סיליקון 60 ס"מ</p>
+            </div>
+			
+			<div class="product" data-category="magav">
+                <img src="images/magavshayish.webp" alt="מגב שיש">
+                <p>מגב שיש סיליקון</p>
+            </div>
+			
+			<div class="product" data-category="cleaning">
+                <img src="images/shava.webp" alt="סחבת רצפה">
+                <p>סחבת מיקרופייבר</p>
+            </div>
+			
+			<div class="product" data-category="cleaning">
+                <img src="images/window.png" alt="מגב חלון">
+                <p>מגב לניקוי חלונות</p>
+            </div>
+		
+</div>
+			
+        </div>
+		
+<a href="https://wa.me/972547939880" target="_blank" class="whatsapp-button">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+</a>
+
+    </main>
+
+    <!-- קובץ JavaScript -->
+	<script>
+  function filterProducts(category) {
+	
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                if (category === 'all' || product.getAttribute('data-category') === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+</script>
+
+</body>
+</html>
