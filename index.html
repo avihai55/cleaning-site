@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מוצרי ניקיון - חנות מקצועית</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="חנות מקצועית למוצרי ניקיון. מגוון רחב של מגבים, מטאטאים, מגבות ועוד. שירות אישי ומסור.">
+    <link rel="stylesheet" href="style.css">
     <script src="myscripts.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
     <nav>
         <ul>
             <li><a href="index.html">דף הבית</a></li>
-
             <li><a href="#about">אודות</a></li>
-
             <li><a href="#contact">צור קשר</a></li>
         </ul>
     </nav>
-
     <header>
         <div class="main-header">
             <div class="logo-title-container">
@@ -29,33 +26,31 @@
             </div>
         </div>
     </header>
-
-
-    <section id="products">
+    <main id="products">
         <h2>המוצרים שלנו</h2>
-
         <div class="filter-buttons">
-            <button onclick="filterProducts('all')">הכל</button>
-            <button onclick="filterProducts('mops')">מגבים</button>
-            <button onclick="filterProducts('brooms')">מטאטאים</button>
-            <button onclick="filterProducts('towels')">מגבות</button>
-            <button onclick="filterProducts('cloths')">מטליות</button>
-            <button onclick="filterProducts('rags')">סחבות</button>
-            <button onclick="filterProducts('rugs')">שטיחים</button>
+            <button data-filter="all" class="active">הכל</button>
+            <button data-filter="mops">מגבים</button>
+            <button data-filter="brooms">מטאטאים</button>
+            <button data-filter="towels">מגבות</button>
+            <button data-filter="cloths">מטליות</button>
+            <button data-filter="rags">סחבות</button>
+            <button data-filter="rugs">שטיחים</button>
         </div>
         <div class="products-grid">
 
-            <div class="product-card" data-category="mops">
-                <img src="images/ifel60.png" alt="מגב אייפל">
+            <article class="product-card" data-category="mops">
+                <img src="images/ifel60.png" alt="מגב אייפל 60 סמ.">
                 <div class="product-info">
                     <h3>מגב אייפל מקצועי</h3>
                     <p>מגב אייפל 60 ס"מ עמיד לניקוי רצפות, איכות גבוהה.</p>
                     <p>(תוספת מוט ב₪10)</p>
                     <p class="price">₪38</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="mops">
+
+            <article class="product-card" data-category="mops">
                 <img src="images/ifel45.png" alt="מגב אייפל">
                 <div class="product-info">
                     <h3>מגב אייפל מקצועי</h3>
@@ -63,9 +58,9 @@
                     <p>(תוספת מוט ב₪10)</p>
                     <p class="price">₪28</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="mops">
+            <article class="product-card" data-category="mops">
                 <img src="images/mop.png" alt="מגב מקצועי">
                 <div class="product-info">
                     <h3>מגב אייפל סיליקון</h3>
@@ -73,9 +68,9 @@
                     <p>(תוספת מוט ב₪10)</p>
                     <p class="price">₪70</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="mops">
+            <article class="product-card" data-category="mops">
                 <img src="images/ifelS45.png" alt="מגב מקצועי">
                 <div class="product-info">
                     <h3>מגב אייפל סיליקון</h3>
@@ -83,9 +78,9 @@
                     <p>(תוספת מוט ב₪10)</p>
                     <p class="price">₪60</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="mops">
+            <article class="product-card" data-category="mops">
                 <img src="images/mop60.png" alt="מגב מקצועי">
                 <div class="product-info">
                     <h3>מגב סיליקון</h3>
@@ -93,9 +88,9 @@
                     <p>(תוספת מוט ב₪10)</p>
                     <p class="price">₪60</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="mops">
+            <article class="product-card" data-category="mops">
                 <img src="images/mop45.png" alt="מגב מקצועי">
                 <div class="product-info">
                     <h3>מגב סיליקון</h3>
@@ -103,9 +98,9 @@
                     <p>(תוספת מוט ב₪10)</p>
                     <p class="price">₪50</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="mops">
+            <article class="product-card" data-category="mops">
                 <img src="images/window.png" alt="מגב חלון">
                 <div class="product-info">
                     <h3>מגב חלון</h3>
@@ -117,18 +112,18 @@
                     </div>
 
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="mops">
+            <article class="product-card" data-category="mops">
                 <img src="images/magavshayish.png" alt="מגב שיש">
                 <div class="product-info">
                     <h3>מגב שיש</h3>
                     <p>מגב שיש מסיליקון לניקוי, מחזיק לאורך זמן.</p>
                     <p class="price">₪27</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="brooms">
+            <article class="product-card" data-category="brooms">
                 <img src="images/broom.png" alt="מטאטא סיליקון">
                 <div class="product-info">
                     <h3>מטאטא סיליקון</h3>
@@ -136,9 +131,9 @@
                     <p>(תוספת מוט ב₪10)</p>
                     <p class="price">₪88</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="brooms">
+            <article class="product-card" data-category="brooms">
                 <img src="images/italybroom.png" alt="מטאטא עמיד">
                 <div class="product-info">
                     <h3>מטאטא עמיד</h3>
@@ -146,9 +141,9 @@
                     <p>(תוספת מוט ב₪10)</p>
                     <p class="price">₪25</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card">
+            <article class="product-card">
                 <img src="images/kelim.png" alt="סקוץ כלים">
                 <div class="product-info">
                     <h3>סקוץ כלים</h3>
@@ -156,128 +151,128 @@
                     <p>מעולה להברקה של סירי נירוסטה,כיריים ותנורים.</p>
                     <p class="price">₪15</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="towels">
+            <article class="product-card" data-category="towels">
                 <img src="images/magevet.png" alt="מגבת עוטפת">
                 <div class="product-info">
                     <h3>מגבת עוטפת</h3>
                     <p>מגבת מיקרופייבר עוטפת לאחר מקלחת, באיכות גבוהה.</p>
                     <p class="price">₪70</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="towels">
+            <article class="product-card" data-category="towels">
                 <img src="images/magevetR.png" alt="מגבת מקלחת">
                 <div class="product-info">
                     <h3>מגבת פיקה לגוף</h3>
                     <p>מגבת לאחר המקלחת שמנגבת מהר,מתייבשת מהר ומתאימה לטיולי שטח ולחיילים.</p>
                     <p class="price">₪80</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card data-category=" towels"">
+            <article class="product-card data-category=" towels"">
                 <img src="images/pike.png" alt="מגבת פיקה">
                 <div class="product-info">
                     <h3> מגבת פיקה למטבח</h3>
                     <p> מגבת עם ספיגה מעולה לייבוש הכלים,אפשר גם לשים מתחת לכלים או לניגוב הידיים.</p>
                     <p class="price">₪20</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="rags">
+            <article class="product-card" data-category="rags">
                 <img src="images/polish.png" alt="פוליש">
                 <div class="product-info">
                     <h3>סחבה לרצפה</h3>
                     <p>סחבת פוליש מעולה לכל סוגי הרצפות.</p>
                     <p class="price">₪17</p>
                 </div>
-            </div>
+            </article>
 
 
-            <div class="product-card" data-category="rags">
+            <article class="product-card" data-category="rags">
                 <img src="images/shava.png" alt="סחבה">
                 <div class="product-info">
                     <h3>סחבת מיקרופייבר</h3>
                     <p>סחבת מיקרופייבר איכותית מבריקה את הרצפה ולא משאירה סימנים, עמידה לאורך זמן.</p>
                     <p class="price">₪15</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="cloths">
+            <article class="product-card" data-category="cloths">
                 <img src="images/mavreket.png" alt="מברקת">
                 <div class="product-info">
                     <h3>מברקת מיקרופייבר</h3>
                     <p>מתאימה לאיבוק והברקה של מוצרים אופטיים.</p>
                     <p class="price">₪25</p>
                 </div>
-            </div>
+            </article>
 
 
-            <div class="product-card" data-category="cloths">
+            <article class="product-card" data-category="cloths">
                 <img src="images/matlit.png" alt="מטלית ניקוי">
                 <div class="product-info">
                     <h3>מטלית לניקוי כללי</h3>
                     <p>שלישיית מטליות לניקוי השיש ומשטחים במטבח.</p>
                     <p class="price">₪17</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="cloths">
+            <article class="product-card" data-category="cloths">
                 <img src="images/3.png" alt="מטלית ניקוי">
                 <div class="product-info">
                     <h3>שלישיית שיש</h3>
                     <p>שלישיית מטליות לניקוי השיש ומשטחים במטבח.</p>
                     <p class="price">₪20</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="cloths">
+            <article class="product-card" data-category="cloths">
                 <img src="images/gilda.png" alt="מטלית גילדה">
                 <div class="product-info">
                     <h3>מטלית ג'ילדה</h3>
                     <p>מטלית מצוינת לניקוי והברקת חלונות בבית וברכב.</p>
                     <p class="price">₪25</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="cloths">
+            <article class="product-card" data-category="cloths">
                 <img src="images/havraka.png" alt="מטלית להברקה">
                 <div class="product-info">
                     <h3>מטלית להברקה</h3>
                     <p>נהדרת לניקוי מראות ולהברקה של ברזים ומקררים</p>
                     <p class="price">₪15</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="cloths">
+            <article class="product-card" data-category="cloths">
                 <img src="images/boheket.png" alt="מטלית למטבח">
                 <div class="product-info">
                     <h3>מטלית "בוהקית" למטבח</h3>
                     <p>מטלית מעולה לניקוי כל סוגי הכיריים ולניקוי ארונות מטבח ופנים המקרר.</p>
                     <p class="price">₪15</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="cloths">
+            <article class="product-card" data-category="cloths">
                 <img src="images/sapir.png" alt="מטלית ספיר">
                 <div class="product-info">
                     <h3>מטלית ספיר</h3>
                     <p>מטליות מטבח עבות.</p>
                     <p class="price">₪25</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card" data-category="cloths">
+            <article class="product-card" data-category="cloths">
                 <img src="images/ipur.png" alt="מטלית להסרת איפור">
                 <div class="product-info">
                     <h3>מטלית להסרת איפור</h3>
                     <p>ניתן להסיר איפור בעזרת מים בלבד ללא שימוש בחומרים, מנקה בייסודיות.</p>
                     <p class="price">₪24</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card"  data-category="rugs">
+            <article class="product-card" data-category="rugs">
                 <img src="images/shatiah.png" alt="שטיח">
                 <div class="product-info">
                     <h3>שטיח מקלחת</h3>
@@ -290,9 +285,9 @@
                     <p> 70X140</p><p class="price">₪130</p>
 
                 </div>
-            </div>
+            </article>
 
-            <div class="product-card"  data-category="rugs">
+            <article class="product-card" data-category="rugs">
                 <img src="images/shatiah3.png" alt="שטיח">
                 <div class="product-info">
                     <h3>שטיח מקלחת אדום</h3>
@@ -300,14 +295,13 @@
                     <p>שטיח בגודל 50 על 80.</p>
                     <p class="price">₪70</p>
                 </div>
-            </div>
+            </article>
 
         </div>
-    </section>
+    </main>
     <br id="about" />
     <div class="container">
         <div class="about-section">
-
             <h2>אודות</h2>
             <h3 class="text-background"> <b>כ-25 שנות ניסיון של איכות וניקיון</b></h3>
             <p class="text-background">נעים להכיר, שמי שמחה קדוסי, ואני בעלת תשוקה עזה לעולם הניקיון. כבר למעלה מ-25 שנה שאני עוסקת בתחום, וצברתי ידע וניסיון רבים.</p>
@@ -327,12 +321,9 @@
         <p class="text-background"><b>שעות פעילות:</b> ימים א-ה בשעות 11:00 - 18:00</p>
         <p class="text-background"><b>.כתובת:</b> עין גדי 18, באר שבע</p>
     </div>
-
     <a href="https://wa.me/972547939880" target="_blank" class="whatsapp-button">
         <img src="images/whatsapp-icon.png" alt="WhatsApp">
     </a>
-
-
     <footer>
         &copy; 2025 כל הזכויות שמורות - ש.ק מוצרי איכות
     </footer>
