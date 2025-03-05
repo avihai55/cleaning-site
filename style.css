@@ -47,7 +47,7 @@ body {
     transition: transform 0.3s ease-in-out;
     background-color: rgba(255, 255, 255, 0.5); /* רקע שקוף יותר ללוגו */
 }
-}
+
   
 
 @keyframes fadeIn {
@@ -73,6 +73,36 @@ body {
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
+
+/* עיצוב כפתורי הסינון */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+    .filter-buttons button {
+        padding: 10px 15px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0073e6;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+        .filter-buttons button:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+
+/* סימון כפתור פעיל */
+button.active {
+    background-color: #005bb5;
+    font-weight: bold;
+}
+
 
 /* מרכוז הקונטיינרים והתאמה לגודל דינמי */
 .container {
@@ -103,12 +133,15 @@ h2 {
     padding: 10px;
 }
 .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: white;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
     overflow: hidden;
+    min-height: 320px;
 }
     .product-card:hover {
         transform: translateY(-5px);
@@ -121,8 +154,12 @@ h2 {
         background-color: #f0f0f0;
     }
 .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     padding: 15px;
-    text-align: left;
+    text-align: center;
 }
 
     .product-info h3 {
@@ -137,11 +174,21 @@ h2 {
         font-size: 1rem;
     }
 
-.price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #0073e6;
-}
+    .product-info .price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #0073e6; /* צבע כחול בולט */
+        margin-top: 5px;
+        transition: color 0.3s ease;
+        text-align: center;
+        margin-top: auto; /* מבטיח שהמחיר יצמד לתחתית */
+        
+    }
+
+    /* אפקט מעבר עכבר - שינוי צבע לכחול כהה יותר */
+    .price:hover {
+        color: #005bb5;
+    }
 
 .product {
     border: none;
@@ -292,15 +339,15 @@ h2 {
         text-align: center;
     }
     .products {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* מתכווץ בניידים */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)); /* מתכווץ בניידים */
     }
 
     .product img {
-        height: 140px; /* מקטין תמונות במסכים קטנים */
+        height: 100px; /* מקטין תמונות במסכים קטנים */
     }
 
     .products-grid {
-        grid-template-columns: 1fr; /* מוצר אחד בכל שורה בניידים */
+        grid-template-columns: 2fr; /* מוצר אחד בכל שורה בניידים */
     }
 
     .product-info {
